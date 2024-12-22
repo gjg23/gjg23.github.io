@@ -1,1 +1,116 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Gibson</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(26, 44, 59);
+            color: rgb(200, 213, 224);
+        }
+        .container {
+            text-align: center;
+            padding-top: 100px; /* Adjust as needed for spacing */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            width: 100%;
+            background-color: rgba(26, 44, 59, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        nav .brand {
+            font-size: 1.5em;
+            color: rgb(200, 213, 224);
+            margin-right: 20px;
+        }
+        nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+        nav ul li a {
+            color: rgb(200, 213, 224);
+        }
+        nav ul li a:hover {
+            color: #0073e6;
+        }
+        nav ul .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(26, 44, 59);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            min-width: 150px; /* Adjust as needed */
+        }
+        nav ul .dropdown li {
+            margin: 0;
+            padding: 10px;
+        }
+        nav ul .dropdown li a {
+            font-size: 1em;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="brand">Grant Gibson</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Projects</a>
+                    <ul class="dropdown">
+                        <li><a href="project-Cnet/index.html">C++ AI</a></li>
+                        <li><a href="project-stocks/index.html">Stock Model</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>My Portfolio</h1>
+    </div>
+</body>
+</html>

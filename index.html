@@ -12,6 +12,7 @@
             background-color: rgb(26, 44, 59);
             color: rgb(200, 213, 224);
             font-size: 1.2vw; /* Base font size scales with viewport width */
+            justify-content: center;
         }
         .container {
             display: flex;
@@ -19,7 +20,7 @@
             align-items: stretch; /* Ensures equal height for both panels */
             padding: 10vh 5vw;
             gap: 2vw; /* Space between the panels */
-            width: 75%;
+            width: 90%;
             margin: auto;
             flex-wrap: wrap; /* Allow the panels to wrap on smaller screens */
         }
@@ -42,11 +43,16 @@
         .about-panel {
             flex: 2; /* About panel takes 2/3 of the container width */
         }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+        }
         .profile-image {
             border-radius: 50%;
             width: 20vw;
             height: 20vw;
             object-fit: cover;
+            margin-bottom: 1vw;
         }
         .name {
             font-size: 2.5vw;
@@ -55,7 +61,7 @@
         .contact-info-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align contact info to the left */
+            align-items: flex-end;
         }
         .contact-info {
             font-size: 1.5vw;
@@ -79,21 +85,24 @@
             margin-bottom: 1vw;
             border-bottom: 0.2vw solid #0073e6;
             padding-bottom: 0.5vw;
+            justify-content: left;
         }
         .about-me, .skills, .interests {
             margin-bottom: 2vw;
+            justify-content: left;
         }
 
         .about-skills-interests {
             display: flex;
             flex-wrap: wrap; /* Allow the skills and interests to stack on small screens */
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .skills, .interests {
             flex: 1;
             margin-right: 2vw;
             margin-left: 2vw;
+            justify-content: center;
         }
 
         nav {
@@ -169,6 +178,10 @@
                 flex-direction: column;
                 padding: 5vh 2vw;
             }
+            .profile-container {
+                display: flex;
+                flex-direction: column;
+            }
             .profile-image {
                 width: 40vw;
                 height: 40vw;
@@ -177,10 +190,10 @@
                 font-size: 5vw;
             }
             .contact-info {
-                font-size: 3vw;
+                font-size: 2vw;
             }
             .contact-links a {
-                font-size: 2.5vw;
+                font-size: 1.5vw;
                 flex-direction: column;
             }
             .about-panel .section-title {
@@ -221,10 +234,12 @@
     </nav>
     <div class="container">
         <div class="panel profile-panel">
-            <img src="documents/IMG_2840.png" alt="Profile Picture" class="profile-image">
-            <div class="contact-info-container">
+            <div class="profile-container">
+                <img src="documents/IMG_2840.png" alt="Profile Picture" class="profile-image">
                 <div class="name">Grant Gibson</div>
-                <div class="contact-info">Contact Information</div>
+            </div>
+            <div class="contact-info-container">
+                <div class="contact-info">Contact</div>
                 <div class="contact-links">
                     <a href="mailto:gjgibson118@gmail.com">Email</a>
                     <a href="https://www.linkedin.com/in/grant-gibson-7648022a4" target="_blank">LinkedIn</a>

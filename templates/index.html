@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grant Gibson</title>
+        <link rel="stylesheet" href="/static/index/styles.css">
+    </head>
+    <body>
+        <!--The top navigation-->
+        <nav>
+            <div class="nav-container">
+                <div class="brand">Grant Gibson</div>
+                <ul>
+                    <li><a href="/templates/index.html">Home</a></li>
+                    <li>
+                        <a href="#">Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="/templates/Cnet.html">C++ AI</a></li>
+                            <li><a href="/templates/webscrape.html">Web Scrapper</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="dropdown">
+                            <li><a
+                                    href="mailto:gjgibson118@gmail.com">Email</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/in/grant-gibson-7648022a4"
+                                    target="_blank">LinkedIn</a></li>
+                            <li><a
+                                    href="https://github.com/gjg23"
+                                    target="_blank">GitHub</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Main body content-->
+        <div class="container">
+            <div class="main-panel">
+
+                <!--About section-->
+                <div class="about-panel">
+                    <!--Brief information-->
+                    <div class="about-me">
+                        <div class="about-content">
+                            <strong class="about-title">
+                                    <span class="highlight-hello">Hello! I am</span>
+                                    <br><span class="highlight-name">Grant Gibson</span>
+                            </strong>
+                            <p class="about-text">
+                                I am a passionate <strong class="highlight-cs">Computer Science</strong>
+                                student at <strong class="highlight-fsu">Florida State University.</strong><br>
+                                This site is a collection of some of my projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--Image of Grant-->
+                    <div class="profile">
+                        <img class="profile-image"
+                            src="/static/index/IMG_2840.png"
+                            alt="Profile Image">
+
+                        <div class="profile-contacts">
+                            <a href="mailto:gjgibson118@gmail.com" target="_blank">
+                                <img src="/static/index/112-gmail_email_mail-512.png"
+                                    alt="Email Logo">
+                            </a>
+                            <a href="https://github.com/gjg23" target="_blank">
+                                <img src="/static/index/github-logo-png_seeklogo-273183.png"
+                                    alt="GitHub Logo">
+                            </a>
+                            <a href="https://www.linkedin.com/in/grant-gibson-7648022a4"
+                                target="_blank">
+                                <img src="/static/index/circle-linkedin-512.png"
+                                    alt="LinkedIn Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divisor"></div>
+
+                <!--Projects section-->
+                <div class="projects-panel">
+                    <div class="project-posting">
+                        <video src="/static/cnet/2024-12-23 10-04-55.mkv" autoplay loop muted class="project-image"></video>
+                        <div class="project-about">
+                            <div class="project-title">
+                                <a href="/templates/Cnet.html">C++ Pong Neural Net</a>
+                            </div>
+                            <p class="project-description">After using neural network libraries in python that were already
+                                built for me, I was curious about how the underlying code worked, so I made my own class in
+                                c++. I created a basic pong enviroment and generated training data for the model. Then I
+                                trained the model on the data and allowed it to play the pong game.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-posting">
+                        <img src="/static/booktitles/Screenshot from 2024-12-27 23-40-45.png" class="project-image-wide">
+                        <div class="project-about">
+                            <div class="project-title">
+                                <a href="/templates/webscrape.html">Webscrapper + Generative language model</a>
+                            </div>
+                            <p class="project-description">Curious about how large datasets are created for LLM's I created a very
+                                basic webscrapper to find booktitles. Another script is able to use this dataset to train a GPT2
+                                model on the dataset. After this it can generate a booktitle when prompted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

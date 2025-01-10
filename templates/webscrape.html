@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebScrapper</title>
+        <link rel="stylesheet" href="/static/booktitles/styles.css">
+    </head>
+    <body>
+        <!--The top navigation-->
+        <nav>
+            <div class="nav-container">
+                <div class="brand">Grant Gibson</div>
+                <ul>
+                    <li><a href="/templates/index.html">Home</a></li>
+                    <li>
+                        <a href="#">Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="/templates/Cnet.html">C++ AI</a></li>
+                            <li><a href="/templates/webscrape.html">Web Scrapper</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="dropdown">
+                            <li><a
+                                    href="mailto:gjgibson118@gmail.com">Email</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/in/grant-gibson-7648022a4"
+                                    target="_blank">LinkedIn</a></li>
+                            <li><a
+                                    href="https://github.com/gjg23"
+                                    target="_blank">GitHub</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="top-panel">
+                <h1>Webscrapper + Generative language model</h1>
+                <p>This project impliments a basic python webscrapper to generate a csv file dataset
+                    for use in training a small language model. It uses BeautifulSoup to scrape the
+                    site and download the titles. Then a seprate python script trains a model based
+                    off GPT2, and then saves the trained model. PyTorch is used for model training.
+                    Then, this model is used to generate full titles based of a starting prompt.
+                </p>
+
+                    <!--                    
+                    You can find the code and detailed explanation in the GitHub
+                    repository linked below.</p>
+                <a href="https://github.com/gjg23/AIPong-Simple"
+                    target="_blank">View on GitHub</a>
+                    -->
+            </div>
+            <div class="bottom-panel">
+                <h2>Project Beginnings</h2>
+                <img src="/static/booktitles/Screenshot from 2024-12-27 23-40-45.png" class="project-image">
+                <p>Currently the dataset is limited and only contains 1000 titles. The model can start to generate a 
+                    meaningful title, but with a shorter prompt it can devolve into nonsense, which is actually pretty
+                    funny.
+                </p>
+            </div>
+            <div class="bottom-panel">
+                <h2>Training Results</h2>
+                <img src="/static/cnet/loss_plot.png" class="project-image"
+                    alt="Loss Plot">
+                <p>This is a simple plot of the loss each training epoch over
+                    500 epochs at a learning rate of 0.00001. The first epochs
+                    are able to learn a lot quickly but as it keeps going it is
+                    harder and harder to reduce the loss further.</p>
+            </div>
+            <div class="bottom-panel">
+                <h2>Learning Rate Comparison</h2>
+                <img src="/static/cnet/loss_log_plot_combined.png"
+                    class="project-image" alt="Learning Rate Comparison Plot">
+                <p>This is a log plot of the loss each training epoch over 500
+                    epochs at a learning rates of 0.0001, 0.00001, and 0.000001.
+                    Initially the larger learning rate quickly reached a very
+                    low loss but was too coarse to keep going and failed. The
+                    smaller learing rate learned steadily but too slow to do
+                    anything meaningful over 500 epochs. In the middle an
+                    acceptable loss was reached. To fully optimize learning, a
+                    reduce learing rate function could be implimented.</p>
+            </div>
+            <div class="button-panel">
+                <a href="/templates/index.html">Back to home</a>
+            </div>
+        </div>
+    </body>
+</html>

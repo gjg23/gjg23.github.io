@@ -231,6 +231,7 @@ nav ul li:hover .dropdown {
 .about-text {
     font-size: 1.2rem;
     color: var(--secondary-color);
+    text-indent: 1.5rem;
 }
 
 .columned-text {

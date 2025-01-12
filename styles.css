@@ -108,12 +108,11 @@ nav ul li:hover .dropdown {
 /* Main container */
 .main {
     display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+    gap: 2rem; /* Space between sidebar and article */
     margin: auto;
     padding: 2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px; /* Allow the container to scale but cap it */
     box-sizing: border-box;
 }
 
@@ -169,30 +168,58 @@ nav ul li:hover .dropdown {
     padding: 2rem;
     box-sizing: border-box;
     overflow-y: auto;
+    max-width: 1200px;
+    margin: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-aspect-ratio: 1/1) {
     .main {
-        flex-direction: column; /* Stacks the sidebar and article vertically */
+        flex-direction: column; /* Stack the sidebar and article vertically */
+        gap: 0; /* Remove any gap between the sidebar and article */
+        margin: 0; /* Ensure no extra margin in the container */
+        padding: 0; /* Remove extra padding */
     }
+
     .sidebar {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Arrange image and contacts horizontally */
+        align-items: center; /* Align items vertically */
         max-width: 100%;
-        flex: 0 0 100%;
-        position: static; /* Remove sticky position on mobile */
+        flex: 0 0 auto;
+        padding: 1rem;
+        position: static; /* Remove sticky positioning for vertical screens */
     }
+
+    .profile {
+        display: flex; /* Use flexbox to arrange children */
+        flex-direction: row; /* Align the image and contacts horizontally */
+        align-items: center; /* Center-align the items vertically */
+        gap: 1rem; /* Add spacing between image and contacts */
+        text-align: left; /* Align text to the left */
+        width: 100%; /* Ensure it spans full width */
+    }
+
     .profile img.profile-image {
-        width: 10rem;
-        height: 10rem;
+        width: 6rem; /* Adjust size for smaller screens */
+        height: 6rem;
+    }
+
+    .profile-contacts {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Arrange contacts vertically */
+        align-items: flex-start; /* Align to the left */
+        gap: 0.5rem; /* Add spacing between contacts */
+    }
+
+    .profile-contacts a {
+        text-align: left; /* Ensure links are aligned to the left */
     }
 }
 
-/* About section */
-.about-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
+.title {
+    font-size: 2rem;
+    color: var(--highlight-color);
+    font-weight: bold;
 }
 
 .about-title {
@@ -206,59 +233,40 @@ nav ul li:hover .dropdown {
     color: var(--secondary-color);
 }
 
-/* Divider */
-.divisor {
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 2rem 0;
+.columned-text {
+    display: flex; /* Use flexbox to arrange children in a row */
+    gap: 2rem; /* Add spacing between the columns */
+    justify-content: flex-start; /* Evenly distribute the columns */
+    align-items: flex-start; /* Align the lists to the top */
 }
 
-/* Projects panel */
-.projects-panel {
+.columned-text p {
+    margin: 0; /* Remove default paragraph margin */
+    flex: 0 1 auto; /* Allow columns to grow equally */
+}
+
+.project {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: column; /* Stack the title and description vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 0rem; /* Control spacing between the title and description */
+    margin-top: 1rem;
 }
 
-.project-posting {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    background-color: var(--card-background);
-    border-radius: 0.5rem;
-    box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
-    padding: 1rem;
-    transition: transform 0.2s ease;
-}
-
-.project-posting:hover {
-    transform: translateY(-0.2rem);
-}
-
-.project-image {
-    width: 30%;
-    border-radius: 0.3rem;
-    box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
-    object-fit: cover;
-}
-
-.project-about {
-    flex: 1;
-}
-
-.project-title a {
+.project-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--highlight-color);
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Indicate it's clickable */
 }
 
-.project-title a:hover {
-    color: var(--highlight-hover);
+.project-title:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 .project-description {
     font-size: 1rem;
     color: var(--secondary-color);
-    margin-top: 0.5rem;
+    margin: 0; /* Reset margin for better alignment */
 }

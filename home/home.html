@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <!--The top navigation bar-->
+
+    <!-- The top navigation bar -->
     <nav>
         <div class="nav-container">
             <div class="brand">Grant Gibson</div>
@@ -25,8 +26,7 @@
                     <a href="#">Contact</a>
                     <ul class="dropdown">
                         <li><a href="mailto:gjgibson118@gmail.com">Email</a></li>
-                        <li><a href="https://www.linkedin.com/in/grant-gibson-7648022a4" target="_blank">LinkedIn</a>
-                        </li>
+                        <li><a href="https://www.linkedin.com/in/grant-gibson-7648022a4" target="_blank">LinkedIn</a></li>
                         <li><a href="https://github.com/gjg23" target="_blank">GitHub</a></li>
                     </ul>
                 </li>
@@ -34,11 +34,10 @@
         </div>
     </nav>
 
-    <!--Main body content-->
-    <div class="container">
-
-        <!--Profile summary on left of content-->
-        <div class="profile">
+    <!-- Main content -->
+    <div class="main">
+        <!-- Profile summary section -->
+        <aside class="sidebar">
             <div class="profile">
                 <img class="profile-image" src="/home/media/IMG_2840.png" alt="Profile Image">
 
@@ -54,49 +53,41 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </aside>
 
-        <!--Centered information-->
-        <div class="main-panel">
-
-            <!--About section-->
-            <div class="about-panel">
-                <div class="about-me">
-                    <div class="about-content">
-                        <strong class="about-title">
-                            <span class="highlight-hello">Hello! I am</span>
-                            <br><span class="highlight-name">Grant Gibson</span>
-                        </strong>
-                        <p class="about-text">
-                            I am a passionate <strong class="highlight-cs">Computer Science</strong>
-                            student at <strong class="highlight-fsu">Florida State University.</strong><br>
-                            This site is a collection of some of my projects.
-                        </p>
-                    </div>
+        <!-- Centered content -->
+        <section class="article">
+            <div class="about">
+                <h1 class="about-title">Hello! I am Grant Gibson</h1>
+                <p class="about-text">
+                    I am a passionate <strong class="highlight-cs">Computer Science</strong> student at <strong class="highlight-fsu">Florida State University.</strong>
+                </p>
+                <div class="columned-text">
+                    <p class="about-text">
+                        My programming experience includes:<br>
+                        <ul>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>SQL</li>
+                        </ul>
+                    </p>
+                    <p class="about-text">
+                        My software experience includes:<br>
+                        <ul>
+                            <li>Docker</li>
+                            <li>VS Code</li>
+                            <li>Linux</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="project">
+                    <h2 class="project-title">Machine Learning Neural Net</h2>
+                    <p class="project-description">After using neural network libraries in Python that were already built for me, I was curious about how the underlying code worked, so I made my own class in C++. I created a basic Pong environment and generated training data for the model. Then I trained the model on the data and allowed it to play the Pong game.</p>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!--Dividing horizontal line-->
-            <div class="divisor"></div>
-
-            <!--Projects section-->
-            <div class="projects-panel">
-                <div class="project-posting">
-                    <video src="/projects/cnet/media/2024-12-23 10-04-55.mkv" autoplay loop muted class="project-image"></video>
-                    <div class="project-about">
-                        <div class="project-title">
-                            <a href="/projects/cnet/cnet.html">C++ Pong Neural Net</a>
-                        </div>
-                        <p class="project-description">After using neural network libraries in python that were already
-                            built for me, I was curious about how the underlying code worked, so I made my own class in
-                            c++. I created a basic pong enviroment and generated training data for the model. Then I
-                            trained the model on the data and allowed it to play the pong game.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>

@@ -47,6 +47,7 @@ nav .nav-container {
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    margin-right: 5rem;
 }
 
 nav .brand {
@@ -56,11 +57,16 @@ nav .brand {
 }
 
 nav ul {
+    position: relative; /* Keeps the structure, but dropdown will position relative to <li> */
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
-    gap: 1.5rem;
+}
+
+nav ul li {
+    position: relative; /* Key to making dropdown position relative to each <li> */
+    margin: 0 1rem; /* Adds spacing between list items */
 }
 
 nav ul li a {
@@ -74,17 +80,17 @@ nav ul li a:hover {
 }
 
 nav ul .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning relative to parent */
+    top: 100%; /* Align right below the parent <ul> */
+    left: 0; /* Align to the left of the parent <ul> */
     background-color: var(--card-background);
     box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
-    z-index: 1;
     min-width: 12rem;
     list-style: none;
     border: 1px solid var(--border-color);
     border-radius: 0.3rem;
+    z-index: 10; /* Ensure dropdown is above the nav */
 }
 
 nav ul .dropdown li a {
@@ -92,6 +98,7 @@ nav ul .dropdown li a {
     display: block;
     color: var(--primary-color);
     font-size: 0.9rem;
+    text-decoration: none;
 }
 
 nav ul li:hover .dropdown {
@@ -99,8 +106,9 @@ nav ul li:hover .dropdown {
 }
 
 /* Main container */
-.container {
+.main {
     display: flex;
+    align-items: flex-start;
     gap: 2rem;
     margin: auto;
     padding: 2rem;
@@ -109,32 +117,37 @@ nav ul li:hover .dropdown {
     box-sizing: border-box;
 }
 
-/* Profile section */
-.profile {
-    flex: 0 0 25%; /* Fixed width for profile section */
+/* Sidebar containing profile information */
+.sidebar {
     max-width: 25%;
-    background-color: var(--card-background);
-    border-radius: 0.5rem;
-    box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
-    padding: 1.5rem;
     box-sizing: border-box;
     text-align: center;
+    position: sticky;
+    top: 2rem; /* Keeps the profile section fixed when scrolling */
 }
 
+/* Profile section */
+.profile {
+    text-align: center;
+    margin: 0 auto; /* Ensures alignment and no margin outside the section */
+}
+
+/* Profile image adjustments */
 .profile img.profile-image {
     width: 12rem;
     height: 12rem;
-    border-radius: 50%;
     margin-bottom: 1rem;
-    box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
 }
 
+/* Contacts panel - Horizontal alignment */
 .profile-contacts {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1.5rem;
+    display: flex; /* Ensure horizontal layout */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 1rem; /* Add spacing between icons */
+    padding: 1rem 0; /* Padding for spacing */
 }
 
+/* Contact icons */
 .profile-contacts a img {
     width: 32px;
     height: 32px;
@@ -142,19 +155,36 @@ nav ul li:hover .dropdown {
     transition: filter 0.2s ease;
 }
 
+/* Contact icons hover effect */
 .profile-contacts a:hover img {
     filter: grayscale(0%);
 }
 
-/* Main panel */
-.main-panel {
+/* Article section */
+.article {
     flex: 1;
     background-color: var(--card-background);
     border-radius: 0.5rem;
     box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
-    overflow-y: auto;
     padding: 2rem;
     box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stacks the sidebar and article vertically */
+    }
+    .sidebar {
+        max-width: 100%;
+        flex: 0 0 100%;
+        position: static; /* Remove sticky position on mobile */
+    }
+    .profile img.profile-image {
+        width: 10rem;
+        height: 10rem;
+    }
 }
 
 /* About section */

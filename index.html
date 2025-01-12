@@ -1,21 +1,87 @@
-<!--Redirect to the home page-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/home/home.html">
-    <title>index</title>
-    <script type="text/javascript">
-        // Fallback in case the meta tag doesn't work
-        setTimeout(function () {
-            window.location.href = '/home/home.html';
-        }, 0);
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Gibson</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-    <p>If you are not redirected automatically, follow this <a href="/home/home.html">link</a>.</p>
+
+    <!-- The top navigation bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="brand">Grant Gibson</div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li>
+                    <a href="#">Contact</a>
+                    <ul class="dropdown">
+                        <li><a href="mailto:gjgibson118@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/grant-gibson-7648022a4" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/gjg23" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main">
+        <!-- Profile summary section -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img class="profile-image" src="/media/IMG_2840.png" alt="Profile Image">
+
+                <div class="profile-contacts">
+                    <a href="mailto:gjgibson118@gmail.com" target="_blank">
+                        <img src="/media/112-gmail_email_mail-512.png" alt="Email Logo">
+                    </a>
+                    <a href="https://github.com/gjg23" target="_blank">
+                        <img src="/media/github-logo-png_seeklogo-273183.png" alt="GitHub Logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/grant-gibson-7648022a4" target="_blank">
+                        <img src="/media/circle-linkedin-512.png" alt="LinkedIn Logo">
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Centered content -->
+        <section class="article">
+            <div class="about">
+                <h1 class="about-title">Hello! I am Grant Gibson</h1>
+                <p class="about-text">
+                    I am a passionate <strong class="highlight-cs">Computer Science</strong> student at <strong class="highlight-fsu">Florida State University.</strong>
+                </p>
+                <div class="columned-text">
+                    <p class="about-text">
+                        My programming experience includes:<br>
+                        <ul>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>SQL</li>
+                        </ul>
+                    </p>
+                    <p class="about-text">
+                        My software experience includes:<br>
+                        <ul>
+                            <li>Docker</li>
+                            <li>VS Code</li>
+                            <li>Linux</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="project">
+                    <h2 class="project-title">Machine Learning Neural Net</h2>
+                    <p class="project-description">After using neural network libraries in Python that were already built for me, I was curious about how the underlying code worked, so I made my own class in C++. I created a basic Pong environment and generated training data for the model. Then I trained the model on the data and allowed it to play the Pong game.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 
 </html>

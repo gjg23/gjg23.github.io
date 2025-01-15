@@ -271,3 +271,32 @@ nav ul li:hover .dropdown {
     color: var(--secondary-color);
     margin: 0; /* Reset margin for better alignment */
 }
+
+.job {
+    display: flex;
+    flex-direction: column; /* Stack the title and description vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 0rem; /* Control spacing between the title and description */
+    margin-top: 1rem;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.job-location {
+    font-size: 1rem;
+    color: var(--highlight-color);
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.job-description {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin: 0; /* Reset margin for better alignment */
+}

@@ -296,6 +296,7 @@ nav ul li:hover .dropdown {
 }
 
 .job-description {
+    text-indent: 1rem;
     font-size: 1rem;
     color: var(--secondary-color);
     margin: 0; /* Reset margin for better alignment */

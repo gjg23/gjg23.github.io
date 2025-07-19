@@ -220,6 +220,8 @@ nav ul li:hover .dropdown {
     font-size: 2rem;
     color: var(--highlight-color);
     font-weight: bold;
+    margin-bottom: 0.1rem;
+    margin-top: 5rem;
 }
 
 .about-title {
@@ -277,7 +279,21 @@ nav ul li:hover .dropdown {
     flex-direction: column; /* Stack the title and description vertically */
     align-items: flex-start; /* Align items to the left */
     gap: 0rem; /* Control spacing between the title and description */
-    margin-top: 1rem;
+    margin-top: 0rem;
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.job-logo {
+    width: 10rem;      /* Adjust size as needed */
+    height: 10rem;
+    object-fit: contain; /* Maintain aspect ratio */
 }
 
 .job-title {
@@ -296,8 +312,9 @@ nav ul li:hover .dropdown {
 }
 
 .job-description {
-    text-indent: 1rem;
+    text-indent: 1.5rem;           /* Slightly larger indent for clearer visual cue */
     font-size: 1rem;
     color: var(--secondary-color);
-    margin: 0; /* Reset margin for better alignment */
+    margin: 0 0 0.5rem 0;
+    line-height: 1;              /* Improve readability with better line spacing */
 }

@@ -165,7 +165,7 @@ nav ul li:hover .dropdown {
     background-color: var(--card-background);
     border-radius: 0.5rem;
     box-shadow: 0 0.2rem 0.4rem var(--shadow-color);
-    padding: 2rem;
+    padding: 3rem;
     box-sizing: border-box;
     overflow-y: auto;
     max-width: 1200px;
@@ -246,6 +246,38 @@ nav ul li:hover .dropdown {
 .columned-text p {
     margin: 0; /* Remove default paragraph margin */
     flex: 0 1 auto; /* Allow columns to grow equally */
+}
+
+.skills {
+    margin: 1rem 0;
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: var(--highlight-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-grid li {
+    padding: 6px 10px;
+    text-align: center;
+    font-weight: 500;
+    transition: color 0.2s ease; /* smooth color change */
+    font-size: 1.2rem;
+}
+
+.skills-grid li:hover {
+    color: var(--highlight-color); /* or pick a custom color like #0077b6 */
 }
 
 .project {

@@ -95,6 +95,19 @@
                 <!-- Projects section -->
                 <h1 class="title">My projects:</h1>
                 <div class="project">
+                    <a href="https://github.com/gjg23/modbus_adapter_demo" alt="Github link for modbus adapter demo" target="_blank" class="project-title">Modbus Adapter Demo</a>
+                    <p class="project-description">
+                        This demo simulates a small-scale industrial setup where a legacy PLC exposes temperature data via Modbus TCP, and a 
+                        software adapter securely polls and translates that data for modern IT consumption. The PLC generates temperature 
+                        readings based on a time-of-day function with added noise to mimic realistic sensor behavior, storing these values in 
+                        Modbus holding registers. The adapter connects to the PLC, reads the registers, converts the data into JSON, and could 
+                        optionally encrypt or forward it to a dashboard or cloud service. This setup demonstrates how legacy OT systems can be 
+                        integrated into modern monitoring and analytics pipelines without replacing hardware, providing a safe, controlled 
+                        environment to experiment with IT/OT convergence, real-time polling, data translation, and secure data handling.
+                    </p>
+                </div>
+
+                <div class="project">
                     <a href="https://github.com/gjg23/AIPong-Simple" alt="Github link for C++ MLP" target="_blank" class="project-title">C++ Multi-Layer Perceptron (MLP)</a>
                     <p class="project-description">
                         After using neural network libraries in Python that were already built for me, I was curious about how the underlying 
